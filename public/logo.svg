@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Sacred Gradients -->
+    <radialGradient id="divineAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3B00" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#D91E00" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#6B0500" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#1A0202" stop-opacity="1"/>
+    </radialGradient>
+    
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0A0"/>
+      <stop offset="50%" stop-color="#FFB800"/>
+      <stop offset="100%" stop-color="#CC8400"/>
+    </linearGradient>
+
+    <linearGradient id="bloodRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF1A1A"/>
+      <stop offset="100%" stop-color="#880000"/>
+    </linearGradient>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="intenseGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Flames -->
+  <circle cx="250" cy="250" r="236" fill="url(#divineAura)" stroke="url(#goldGlow)" stroke-width="8" filter="url(#glowEffect)" />
+  <circle cx="250" cy="250" r="222" fill="none" stroke="url(#goldGlow)" stroke-width="2" stroke-dasharray="8,6" />
+  <circle cx="250" cy="250" r="208" fill="#140303" stroke="url(#goldGlow)" stroke-width="3" />
+
+  <!-- 24 Sacred Lotus Petals Ring -->
+  <g id="petals" transform="translate(250,250)">
+    <!-- Radiating Ray Spikes -->
+    <g stroke="url(#goldGlow)" stroke-width="2" opacity="0.6">
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(0)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(15)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(30)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(45)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(60)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(75)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(90)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(105)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(120)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(135)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(150)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(165)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(180)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(195)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(210)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(225)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(240)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(255)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(270)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(285)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(300)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(315)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(330)" />
+      <line x1="0" y1="-208" x2="0" y2="-192" transform="rotate(345)" />
+    </g>
+  </g>
+
+  <!-- Circular text path for the Samiti Name -->
+  <path id="textCircleTop" d="M 68,250 A 182,182 0 1,1 432,250" fill="none" />
+  <path id="textCircleBottom" d="M 432,250 A 182,182 0 0,1 68,250" fill="none" />
+
+  <text font-family="'Cinzel', serif" font-weight="bold" font-size="20" fill="url(#goldGlow)" letter-spacing="3.5">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      MAA KAALI HINDU DHARMA RAKSHAKA SAMITI
+    </textPath>
+  </text>
+  <text font-family="'Cinzel', serif" font-weight="bold" font-size="18" fill="#FFC857" letter-spacing="4">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      ★ धर्मो रक्षति रक्षितः ★ SATYAMEVA JAYATE ★
+    </textPath>
+  </text>
+
+  <!-- Inner Sanctum Circle -->
+  <circle cx="250" cy="250" r="145" fill="#200404" stroke="url(#goldGlow)" stroke-width="4" />
+  
+  <!-- Sacred Kali Khadga (Divine Sword of Maa Kali) & Trishul Emblem -->
+  <!-- Khadga (Sacred Curved Blade on Left/Center) -->
+  <g id="divineWeapons" filter="url(#intenseGlow)">
+    <!-- Trishul Center Blade -->
+    <path d="M 246,125 Q 248,110 250,90 Q 252,110 254,125 L 254,340 L 246,340 Z" fill="url(#goldGlow)" />
+    <!-- Trishul Left Prong -->
+    <path d="M 246,190 C 215,185 200,165 200,135 C 212,145 228,155 246,155 Z" fill="url(#goldGlow)" />
+    <!-- Trishul Right Prong -->
+    <path d="M 254,190 C 285,185 300,165 300,135 C 288,145 272,155 254,155 Z" fill="url(#goldGlow)" />
+    <!-- Trishul Base Ring & Damru -->
+    <ellipse cx="250" cy="195" rx="16" ry="6" fill="url(#goldGlow)" />
+    <polygon points="238,202 262,202 244,222 256,222" fill="#E65100" stroke="url(#goldGlow)" stroke-width="2" />
+  </g>
+
+  <!-- Divine Third Eye (Trinetra) of Maa Kali -->
+  <g id="trinetra" transform="translate(250, 165)">
+    <!-- Flame Aura of Third Eye -->
+    <path d="M 0,-28 C 14,-14 16,14 0,28 C -16,14 -14,-14 0,-28 Z" fill="url(#bloodRed)" stroke="url(#goldGlow)" stroke-width="2" />
+    <circle cx="0" cy="0" r="5" fill="#FFF0A0" />
+    <circle cx="0" cy="0" r="2.5" fill="#000000" />
+  </g>
+
+  <!-- Red Sindoor / Tilak and Crescent Moon (Chandra) of Maa Kali -->
+  <path d="M 235,130 Q 250,140 265,130 Q 250,148 235,130 Z" fill="#FFC857" />
+
+  <!-- Maa Kali Fierce Tongue & Sacred Red Lip Motif (Sacred Red Tongue) -->
+  <g id="kaliTongue" transform="translate(250, 265)">
+    <!-- Divine Lips -->
+    <path d="M -42,-15 Q 0,-28 42,-15 Q 0,-2 42,10 Q 0,0 -42,10 Z" fill="#990000" stroke="url(#goldGlow)" stroke-width="1.5" />
+    <!-- Sacred Blood-Red Tongue Extending Downward -->
+    <path d="M -16,0 C -18,25 -22,48 0,65 C 22,48 18,25 16,0 Z" fill="url(#bloodRed)" stroke="url(#goldGlow)" stroke-width="2" filter="url(#glowEffect)" />
+    <line x1="0" y1="5" x2="0" y2="48" stroke="#FF9999" stroke-width="1.5" opacity="0.7" />
+  </g>
+
+  <!-- Bottom Lotus Stand -->
+  <g id="lotusBase" transform="translate(250, 345)">
+    <path d="M -70,0 C -50,-20 -20,-25 0,-10 C 20,-25 50,-20 70,0 C 40,25 -40,25 -70,0 Z" fill="url(#bloodRed)" stroke="url(#goldGlow)" stroke-width="2.5" />
+    <path d="M -45,-5 C -25,-25 0,-5 0,-5 C 0,-5 25,-25 45,-5 C 25,12 -25,12 -45,-5 Z" fill="#FF8800" stroke="url(#goldGlow)" stroke-width="1.5" />
+    <circle cx="0" cy="5" r="4" fill="#FFF0A0" />
+  </g>
+
+  <!-- Devanagari Inscription -->
+  <text x="250" y="385" font-family="'Yatra One', 'Rozha One', serif" font-weight="bold" font-size="21" fill="url(#goldGlow)" text-anchor="middle" letter-spacing="1">
+    ॥ ॐ क्रीं कालिकायै नमः ॥
+  </text>
+</svg>
