@@ -150,7 +150,7 @@ export const Support: React.FC = () => {
             <div className="max-w-lg mx-auto bg-[#0a0e1a] border-2 border-amber-400 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-4 animate-fadeIn">
               <div className="flex items-center justify-between border-b border-amber-500/30 pb-3">
                 <div className="flex items-center space-x-2.5">
-                  <img src="/logo.svg" alt="Maa Kali Emblem" className="w-10 h-10 object-contain" />
+                  <img src="./logo.svg" alt="Maa Kali Emblem" className="w-10 h-10 object-contain" />
                   <div>
                     <h4 className="font-serif-sacred text-xs font-bold text-amber-400">
                       MAA KAALI HINDU DHARMA RAKSHAKA SAMITI
@@ -358,7 +358,7 @@ export const Support: React.FC = () => {
                 <div className="p-4 rounded-xl bg-black/40 border border-slate-800 text-center space-y-2">
                   <div className="w-32 h-32 mx-auto bg-white p-2 rounded-xl flex items-center justify-center">
                     <img 
-                      src="/logo.svg" 
+                      src="./logo.svg" 
                       alt="UPI QR Code preview" 
                       className="w-full h-full object-contain"
                     />

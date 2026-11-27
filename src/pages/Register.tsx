@@ -117,7 +117,7 @@ export const Register: React.FC = () => {
 
                 <div className="flex items-center justify-between border-b border-amber-500/30 pb-3 mb-4">
                   <div className="flex items-center space-x-2.5">
-                    <img src="/logo.svg" alt="Maa Kali Emblem" className="w-10 h-10 object-contain" />
+                    <img src="./logo.svg" alt="Maa Kali Emblem" className="w-10 h-10 object-contain" />
                     <div>
                       <h4 className="font-serif-sacred text-xs font-bold text-amber-400">
                         MAA KAALI SAMITI

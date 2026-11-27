@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Identity & Shloka */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/logo.svg" alt="Maa Kaali Emblem" className="w-12 h-12 object-contain" />
+              <img src="./logo.svg" alt="Maa Kaali Emblem" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="font-serif-sacred text-base font-bold text-amber-400 leading-snug">
                   Maa Kaali Hindu Dharma Rakshaka Samiti

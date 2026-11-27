@@ -226,7 +226,7 @@ export const Home: React.FC = () => {
                       loading="eager"
                       onError={(e) => {
                         // Fallback image if network fails
-                        (e.target as HTMLImageElement).src = "/logo.svg";
+                        (e.target as HTMLImageElement).src = "./logo.svg";
                       }}
                     />
 
@@ -235,7 +235,7 @@ export const Home: React.FC = () => {
 
                     {/* Divine Emblem Badge pinned on image */}
                     <div className="absolute top-3 right-3 w-14 h-14 rounded-full bg-black/80 border-2 border-amber-400 p-1 shadow-xl">
-                      <img src="/logo.svg" alt="Maa Kali Logo" className="w-full h-full object-contain" />
+                      <img src="./logo.svg" alt="Maa Kali Logo" className="w-full h-full object-contain" />
                     </div>
 
                     {/* Bottom Caption on Image */}
@@ -532,7 +532,7 @@ export const Home: React.FC = () => {
 
             <div className="lg:col-span-4 flex justify-center">
               <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-tr from-red-950 via-amber-700 to-red-900 p-1 shadow-2xl">
-                <img src="/logo.svg" alt="Maa Kaali Logo" className="w-full h-full object-contain rounded-full bg-black/90 p-2" />
+                <img src="./logo.svg" alt="Maa Kaali Logo" className="w-full h-full object-contain rounded-full bg-black/90 p-2" />
               </div>
             </div>
           </div>

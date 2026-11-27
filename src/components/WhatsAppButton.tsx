@@ -61,7 +61,7 @@ export const WhatsAppFloatingButton: React.FC = () => {
 
             {/* Header with Maa Kaali Emblem */}
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/logo.svg" alt="Logo" className="w-12 h-12 object-contain" />
+              <img src="./logo.svg" alt="Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="text-base font-bold text-amber-400 font-serif-sacred">
                   Maa Kaali Dharma Rakshak WhatsApp

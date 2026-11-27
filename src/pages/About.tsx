@@ -27,7 +27,7 @@ export const About: React.FC = () => {
         <div className="rounded-2xl bg-gradient-to-r from-red-950/40 via-[#150a12] to-amber-950/40 border border-amber-500/30 p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6">
           <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden bg-black border-2 border-amber-400 shrink-0 shadow-xl">
             <img 
-              src="/logo.svg" 
+              src="./logo.svg" 
               alt="Maa Kali Emblem" 
               className="w-full h-full object-contain p-1"
             />

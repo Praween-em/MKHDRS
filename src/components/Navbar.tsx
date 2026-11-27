@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
             <div className="relative">
               <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-red-950 via-red-800 to-amber-600 p-0.5 shadow-lg shadow-red-900/40 group-hover:shadow-amber-500/30 transition-all duration-300">
                 <img 
-                  src="/logo.svg" 
+                  src="./logo.svg" 
                   alt="Maa Kaali Emblem" 
                   className="w-full h-full object-contain rounded-full bg-black/80 p-0.5"
                 />
