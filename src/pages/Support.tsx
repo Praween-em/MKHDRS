@@ -15,6 +15,7 @@ import {
   Users
 } from 'lucide-react';
 import { WHATSAPP_GROUP_LINK } from '../components/Navbar';
+import { api } from '../services/api';
 
 export const Support: React.FC = () => {
   // Donation Form States
@@ -44,26 +45,31 @@ export const Support: React.FC = () => {
     setTimeout(() => setCopiedUpi(false), 2000);
   };
 
-  const handleDonateSubmit = (e: React.FormEvent) => {
+  const [submittingDonation, setSubmittingDonation] = useState(false);
+
+  const handleDonateSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalAmount = selectedAmount === 'custom' ? parseFloat(customAmount) : selectedAmount;
     if (!finalAmount || isNaN(finalAmount) || finalAmount <= 0) return;
 
-    // Simulate instant donation receipt generation
-    const generatedReceipt = {
-      receiptNumber: `MK-DON-${Date.now().toString().slice(-6)}`,
-      donorName: donorName.trim() || 'Devoted Sanatani',
-      amount: finalAmount,
-      purpose: sevaPurpose,
-      date: new Date().toLocaleDateString('en-IN', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      }),
-      transactionId: `TXN-UPI-${Math.floor(100000000 + Math.random() * 900000000)}`
-    };
-
-    setReceipt(generatedReceipt);
+    setSubmittingDonation(true);
+    try {
+      const res = await api.submitDonation({
+        donorName: donorName.trim() || 'Devoted Sanatani',
+        amount: finalAmount,
+        phone: donorPhone,
+        pan: donorPan,
+        purpose: sevaPurpose,
+        paymentMethod: 'UPI / Direct Gateway'
+      });
+      if (res.receipt) {
+        setReceipt(res.receipt);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setSubmittingDonation(false);
+    }
   };
 
   return (

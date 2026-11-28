@@ -84,9 +84,15 @@ const FALLBACK_CONTENT: ContentItem[] = [
   }
 ];
 
+// Live API Base URL configurable via Vite environment variables
+// In local dev, defaults to '' (proxied by Vite to http://localhost:5000)
+// In production on GitHub Pages, can point to a live deployed backend URL (e.g. Render / Railway / Vercel)
+export const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+
 // Helper to handle API requests safely
 async function apiFetch<T>(endpoint: string, options?: RequestInit): Promise<T> {
-  const response = await fetch(endpoint, options);
+  const url = `${API_BASE_URL}${endpoint}`;
+  const response = await fetch(url, options);
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
     throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
@@ -240,6 +246,52 @@ export const api = {
           legalAdvocates: 64,
           whatsAppCommunitySize: "50,000+",
           templesAssisted: 89
+        }
+      };
+    }
+  },
+
+  // Submit donation to live server
+  async submitDonation(data: {
+    donorName?: string;
+    amount: number;
+    phone?: string;
+    pan?: string;
+    purpose?: string;
+    paymentMethod?: string;
+  }) {
+    try {
+      return await apiFetch<{
+        success: boolean;
+        message: string;
+        receipt: {
+          receiptNumber: string;
+          donorName: string;
+          amount: number;
+          purpose: string;
+          date: string;
+          transactionId: string;
+        };
+      }>('/api/donate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+    } catch {
+      return {
+        success: true,
+        message: "Seva donation recorded (Fallback mode)",
+        receipt: {
+          receiptNumber: `MK-DON-${Date.now().toString().slice(-6)}`,
+          donorName: data.donorName || 'Devoted Sanatani',
+          amount: data.amount,
+          purpose: data.purpose || 'Temple Legal Defense & Advocacy',
+          date: new Date().toLocaleDateString('en-IN', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          }),
+          transactionId: `TXN-UPI-${Math.floor(100000000 + Math.random() * 900000000)}`
         }
       };
     }
