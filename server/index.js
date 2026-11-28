@@ -436,6 +436,6 @@ if (fs.existsSync(distPath)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`🕉️ Maa Kaali Dharma Rakshaka Samiti Live Backend running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🕉️ Maa Kaali Dharma Rakshaka Samiti Live Backend running on port ${PORT}`);
 });
