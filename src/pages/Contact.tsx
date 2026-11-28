@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#0a0d16] text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto space-y-12">
-        
+
         {/* Header */}
         <div className="text-center space-y-3">
           <div className="inline-flex items-center space-x-2 bg-red-950/60 border border-red-700/60 px-3.5 py-1.5 rounded-full text-xs font-semibold text-amber-300">
@@ -57,10 +57,10 @@ export const Contact: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Direct Helplines & WhatsApp */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* WhatsApp Card */}
             <div className="rounded-2xl bg-gradient-to-r from-emerald-950/60 to-[#0c1a14] border border-emerald-500/40 p-6 space-y-4">
               <div className="flex items-center space-x-3">
@@ -114,7 +114,7 @@ export const Contact: React.FC = () => {
                 <Phone className="w-4 h-4 text-amber-500 shrink-0" />
                 <div>
                   <p className="font-semibold text-slate-100">Emergency Phone</p>
-                  <p className="font-mono text-slate-300">+91 98765-52254 / +91 94321 00000</p>
+                  <p className="font-mono text-slate-300">+91 8374950475 / +91 6300687808</p>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export const Contact: React.FC = () => {
                 <Mail className="w-4 h-4 text-amber-500 shrink-0" />
                 <div>
                   <p className="font-semibold text-slate-100">Official Correspondence</p>
-                  <p className="text-slate-300 font-mono">contact@maakaalirakshak.org</p>
+                  <p className="text-slate-300 font-mono">contact@maakalirakshak@gmail.com</p>
                 </div>
               </div>
 

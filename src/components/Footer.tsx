@@ -145,6 +145,8 @@ export const Footer: React.FC = () => {
             <Link to="/petitions" className="hover:text-amber-400 transition">Legal Transparency</Link>
             <span>•</span>
             <Link to="/support" className="hover:text-amber-400 transition">Donate</Link>
+            <span>•</span>
+            <Link to="/admin" className="hover:text-amber-400 text-amber-500/80 font-mono transition">Admin Portal</Link>
           </div>
         </div>
       </div>

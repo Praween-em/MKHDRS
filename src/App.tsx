@@ -10,6 +10,7 @@ import { Support } from './pages/Support';
 import { Contact } from './pages/Contact';
 import { Register } from './pages/Register';
 import { Terms } from './pages/Terms';
+import { Admin } from './pages/Admin';
 
 export const App: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ export const App: React.FC = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/register" element={<Register />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
